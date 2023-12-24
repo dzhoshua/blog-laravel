@@ -21,7 +21,14 @@
 				<span>{{ $message }}</span>
 			@enderror
 	</div>
+	<div>
+		<label for="publish_at"><div>Публикация (если не указано, публикуется сразу):</div></label>
+			<input type="datetime-local" name="publish_at"></input>
+			@error("publish_at")
+				<span>{{ $message }}</span>
+			@enderror
+	</div>
 	
-	<button type="submit">Опубликовать</button>
+	<button type="submit">Создать</button>
 </form>
 @endsection
